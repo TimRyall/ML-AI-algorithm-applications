@@ -4,9 +4,6 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-###############################################################################
-# Q1
-###############################################################################
 
 # Import regression data
 regrDf = pd.read_csv("Week3/w3regr.csv")
