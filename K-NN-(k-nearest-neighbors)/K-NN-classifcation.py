@@ -9,13 +9,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 ###############################################################################
-# Q3 a)
-# Build a k-NN classifier with k = 3 for dataset w3classif.csv and find the training
+# Build a k-NN classifier with k = 3 for dataset classif.csv and find the training
 # and test loss (i.e. misclassification rate).
 ###############################################################################
 
 # Import classifcation data
-classifDf = pd.read_csv("Week3/w3classif.csv", names=["x1","x2","y"])
+classifDf = pd.read_csv("classif.csv", names=["x1","x2","y"])
 
 # Shuffle the data randomly 
 # frac=1 returns 100% of the data in the "random sample"
@@ -75,7 +74,6 @@ plt.show()
 # This will produce a scatter plot with the decision regions for the KNN classifier.
 
 ###############################################################################
-# Q3 c)
 # Experiment with different k values and see how it affects the loss values and the
 # decision regions.
 ###############################################################################
