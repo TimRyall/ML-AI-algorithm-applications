@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 ###############################################################################
 
 # Import regression data
-regrDf = pd.read_csv("Week3/w3regr.csv")
+regrDf = pd.read_csv("regr.csv")
 
 # Shuffle the data randomly 
 # frac=1 returns 100% of the data in the "random sample"
