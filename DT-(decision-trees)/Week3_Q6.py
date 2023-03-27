@@ -1,0 +1,94 @@
+import warnings
+warnings.filterwarnings("ignore", message="X does not have valid feature names")
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import mean_squared_error
+import numpy as np
+import matplotlib.pyplot as plt
+
+###############################################################################
+# Q4 a)
+# Build a k-NN regression model with k = 3 for dataset w3regr.csv and find the
+# training and test loss (i.e. sum of squared error)
+###############################################################################
+
+# Import regression data
+regrDf = pd.read_csv("Week3/w3regr.csv")
+
+# Shuffle the data randomly 
+# frac=1 returns 100% of the data in the "random sample"
+regrDf = regrDf.sample(frac=1)  
+
+# regression
+# Assign the input (first col of df) and output (second col)
+inputRegr = regrDf.drop(columns=regrDf.columns[1])
+outputRegr = regrDf.iloc[:, 1]
+
+# Assign 70% training data 30% testing data for each data set
+XTrainRegr, XTestRegr, yTrainRegr, yTestRegr = train_test_split(
+    inputRegr, outputRegr, test_size=0.3)
+
+# Create K-NN model with k = 3 for our classifcation data
+depth = 20
+DTRegr = DecisionTreeRegressor(max_depth=depth)
+
+# Train the model with our training data
+DTRegr.fit(XTrainRegr, yTrainRegr)
+# Use the model to predcit classes based on the test inputs
+yPredRegr= DTRegr.predict(XTestRegr)
+
+# Compare the predicted classes with the real test classes
+# accuracy = % of correct predictions 
+# missclass = $ of incorrect predictions
+mse  = mean_squared_error(yTestRegr, yPredRegr)
+print(f"Mean squared error of DT (depth = {depth}): {mse}")
+
+###############################################################################
+# Q3 b)
+# Plot the training and/or test data together with the predicted “function” of the
+# model.
+###############################################################################
+
+# Predict data for all x value data based on our model
+yPredRegrAll = DTRegr.predict(np.linspace(inputRegr.min(), inputRegr.max(), 100))
+
+# Plot the training data with the predicted function
+plt.scatter(inputRegr, outputRegr, color='blue', label='Data')
+plt.plot(np.linspace(inputRegr.min(), inputRegr.max(), 100), 
+               yPredRegrAll, color='red', label='Predicted function')
+plt.xlabel('Input values')
+plt.ylabel('Output values')
+plt.title(f'DT Regression (depth={depth})')
+plt.legend()
+plt.show()
+
+###############################################################################
+# Q4 c)
+# Experiment with different k values and see how it affects the loss values and the
+# predicted function.
+###############################################################################
+"""
+# create array to store misclassifcation rates
+mses = []
+for k in range(1,20):
+    knnRegr = KNeighborsRegressor(n_neighbors=k)
+
+    # Train the model with our training data
+    knnRegr.fit(XTrainRegr, yTrainRegr)
+    # Use the model to predcit classes based on the test inputs
+    yPredRegr= knnRegr.predict(XTestRegr)
+
+    # Compare the predicted classes with the real test classes
+    # accuracy = % of correct predictions 
+    # missclass = $ of incorrect predictions
+    mse  = mean_squared_error(yTestRegr, yPredRegr)
+    mses.append(mse)
+
+plt.scatter(range(1,20), mses)
+plt.xlabel('k')
+plt.ylabel('mean sqaured error')
+plt.title("MSE for diffrent k")
+plt.show()
+"""
