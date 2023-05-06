@@ -1,0 +1,1 @@
+print(f'Mean: {np.mean(allmse)} SD: {np.sqrt(np.var(allmse))}')
