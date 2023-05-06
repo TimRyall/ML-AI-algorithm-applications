@@ -25,8 +25,8 @@ The main algorithms used involve:
     Linear regression
     Polynomial regression
 
-<img width="449" alt="classif_k=3" src="https://user-images.githubusercontent.com/78301985/236603724-6a2391a8-bd82-4fad-bf86-71fba7e60efb.png">
-![regr_k=5](https://user-images.githubusercontent.com/78301985/236603733-8b4bf1e9-e4b5-4235-aa0a-c3ce9c602565.png)
-![l2_regression](https://user-images.githubusercontent.com/78301985/236603781-81ec3de4-5882-40de-969e-9954971aff65.png)
+<img width="449" alt="classif_k=3" src="https://user-images.githubusercontent.com/78301985/236603966-7e155ddf-b659-4263-ac50-758eac23dd00.png">
+![regr_k=10](https://user-images.githubusercontent.com/78301985/236603993-202a374c-0d9e-430c-975a-9982d13297ea.png)
+
 
 ![poly](https://user-images.githubusercontent.com/78301985/236598721-c60f25f8-6110-47c6-a9b6-30133f7ee450.png)
