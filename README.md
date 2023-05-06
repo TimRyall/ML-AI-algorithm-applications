@@ -24,6 +24,9 @@ The main algorithms used involve:
     Decision Trees
     Linear regression
     Polynomial regression
-![l1_regression](https://user-images.githubusercontent.com/78301985/236598541-4a2f0ba7-c473-409a-a540-32d684652ee5.png)
-<img width="449" alt="classif_k=3" src="https://user-images.githubusercontent.com/78301985/236598551-586ecee9-76ff-44c2-86b5-7603a78422bf.png">
-![regr_k=10](https://user-images.githubusercontent.com/78301985/236598559-bec9312d-77ef-4fb3-93a7-ba353d61345a.png)
+
+![anla](https://user-images.githubusercontent.com/78301985/236598713-a36fc9af-23cd-4d34-b1f7-a1400f88bbfe.png)
+![comp](https://user-images.githubusercontent.com/78301985/236598714-308f3a70-c5ee-4d31-980a-38c951103e73.png)
+![corrmat](https://user-images.githubusercontent.com/78301985/236598716-16c788ee-10bb-450b-b8df-27d24b0e2cff.png)
+![lin](https://user-images.githubusercontent.com/78301985/236598718-9a174d67-c689-494a-8fc0-d5b7fb1c7a3d.png)
+![poly](https://user-images.githubusercontent.com/78301985/236598721-c60f25f8-6110-47c6-a9b6-30133f7ee450.png)
