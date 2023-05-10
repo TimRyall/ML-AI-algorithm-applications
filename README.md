@@ -18,15 +18,9 @@ The main algorithms used involve:
         AdaBoost
 
     K-fold Cross-validation
-
     Regularization
-
     General data cleaning and processing
-
     K-nearest neighbors algorithm (k-NN)
-
     Decision Trees
-
     Linear regression
-
     Polynomial regression
