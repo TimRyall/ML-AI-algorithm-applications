@@ -1,5 +1,6 @@
-
+***
 Applications of many ML and AI algorithms on real datasets. Each application includes examples and figures.
+***
 
 These programs utilize libraries such as Pandas, Seaborn, Matplotlib, Scikit-learn, PyTorch, TensorFlow (Keras), and other optimization & ML packages.
 
