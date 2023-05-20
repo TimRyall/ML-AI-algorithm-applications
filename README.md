@@ -5,20 +5,20 @@ These programs utilize libraries such as Pandas, Seaborn, Matplotlib, Scikit-lea
 
 The main algorithms used involve:
 
-Neural networks including:
-    Multilayer Perceptron (MLP)
-    Convolutional neural network (CNN)
+* Neural networks including:
+    - Multilayer Perceptron (MLP)
+    - Convolutional neural network (CNN)
 
-Ensemble methods including:
-    Bagging
-    Random Forests
-    Boosting
-    AdaBoost
+* Ensemble methods including:
+    - Bagging
+    - Random Forests
+    - Boosting
+    - AdaBoost
 
-K-fold Cross-validation
-Regularization
-General data cleaning and processing
-K-nearest neighbors algorithm (k-NN)
-Decision Trees
-Linear regression
-Polynomial regression
+* K-fold Cross-validation
+* Regularization
+* General data cleaning and processing
+* K-nearest neighbors algorithm (k-NN)
+* Decision Trees
+* Linear regression
+* Polynomial regression
