@@ -11,13 +11,13 @@ from sklearn.preprocessing import PolynomialFeatures
 
 #####################################################################
 # import data
-df = pd.read_csv("report/Rel_2_Nutrient_file.csv")
+df = pd.read_csv("nutritional-data/Rel_2_Nutrient_file.csv")
 
 # remove the 4 columns mentioned in 'Data set information' Section
 df = df.drop(columns=df.columns[:3]) # removing: Key, Classifcation, Name
 
 # read in the core nutrient file
-core_nutrients_df = pd.read_csv("report/Core_Nutrient_details.csv")
+core_nutrients_df = pd.read_csv("nutritional-data/Core_Nutrient_details.csv")
 # only use the component column 
 core_nutrients = core_nutrients_df['Component']
 
@@ -70,7 +70,7 @@ df = df[corr_with_energy.index]
 
 print(df.columns)
 
-from sklearn.linear_model import Ridge
+from sklearn.linear_model import Lasso
 
 
 df = df.sample(frac=1) # randomly shuffle data
@@ -85,31 +85,16 @@ X = scaler.transform(X)
 all_mse = []
 degree = 2
 from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
 # define the number of folds for cross-validation
-num_folds = 5
+num_folds = 10
 kf = KFold(n_splits=num_folds)
+reg = Lasso(alpha=0.303, max_iter=10000)   
 
-# loop through each fold
-for train_index, test_index in kf.split(X):
-    # get the training and testing data for this fold
-    X_train, X_test = X[train_index], X[test_index]
-    y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+scores = cross_val_score(reg, X, y, cv=kf)
 
-    # Create a polynomial feature transformer with degree 2
-    transformer = PolynomialFeatures(degree=degree, include_bias=False)
-    X_train = transformer.fit_transform(X_train) # adujst X to add polynomial terms
-    X_test = transformer.fit_transform(X_test) 
 
-    # train and fit the linear regression model
-    reg = Ridge(alpha=0.303, max_iter=10000)   
-    reg.fit(X_train, y_train)
-
-    # apply the linear model to our test data
-    y_hat = reg.predict(X_test)
-    mse  = mean_squared_error(y_test, y_hat) # calculate MSE
-    all_mse.append(mse) # add mse to lsit
-
-print(f'Mean: {np.mean(all_mse)} SD: {np.sqrt(np.var(all_mse))}')
+print(f'Mean: {np.mean(scores)} SD: {np.sqrt(np.var(scores))}')
 
 
 
