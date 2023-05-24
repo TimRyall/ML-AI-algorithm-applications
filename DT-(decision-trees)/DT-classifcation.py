@@ -41,7 +41,6 @@ misclassRate  = 1 - accuracy_score(yTestClassif, yPredClassif)
 print(f"Misclassification rate  of DT (depth = {depth}): {misclassRate}")
 
 ###############################################################################
-# Q3 b)
 # Plot the decision regions for your classifier together with the training and/or test
 # data points.
 ###############################################################################
@@ -69,7 +68,6 @@ plt.show()
 # This will produce a scatter plot with the decision regions for the KNN classifier.
 
 ###############################################################################
-# Q3 c)
 # Experiment with different k values and see how it affects the loss values and the
 # decision regions.
 ###############################################################################

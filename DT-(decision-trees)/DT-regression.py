@@ -9,9 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 ###############################################################################
-# Q4 a)
-# Build a k-NN regression model with k = 3 for dataset w3regr.csv and find the
-# training and test loss (i.e. sum of squared error)
+# Build a k-NN regression model 
 ###############################################################################
 
 # Import regression data
@@ -46,7 +44,6 @@ mse  = mean_squared_error(yTestRegr, yPredRegr)
 print(f"Mean squared error of DT (depth = {depth}): {mse}")
 
 ###############################################################################
-# Q3 b)
 # Plot the training and/or test data together with the predicted “function” of the
 # model.
 ###############################################################################
@@ -65,7 +62,6 @@ plt.legend()
 plt.show()
 
 ###############################################################################
-# Q4 c)
 # Experiment with different k values and see how it affects the loss values and the
 # predicted function.
 ###############################################################################
