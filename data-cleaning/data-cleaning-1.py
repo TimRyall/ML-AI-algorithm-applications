@@ -39,6 +39,6 @@ legend1 = classifAxi.legend(*classifPlt.legend_elements(),
                     loc="lower right", title="Classes")
 classifAxi.add_artist(legend1)
 
-# Display the plots
+# Display the plots here
 plt.show()
 
