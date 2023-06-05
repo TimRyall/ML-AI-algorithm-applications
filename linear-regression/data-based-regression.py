@@ -30,7 +30,7 @@ def draw_true_func():
 #####################################################################
 
 def poke_regr():
-    data = pd.read_csv("4.1-linear-regression/pokemonregr.csv")
+    data = pd.read_csv("linear-regression/pokemonregr.csv")
     data = data.sample(frac=1) # shuffle data
     data = data.fillna(0)
 
