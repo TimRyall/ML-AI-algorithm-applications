@@ -12,7 +12,7 @@ from sklearn.linear_model import Lasso
 #penalty term +λ||θ||1 (where || ||1 = |θ0|+|θ1|+. . . is the taxicab norm to our cost function
 lambda_param = 0.01
 
-data = pd.read_csv("4.1-linear-regression/pokemonregr.csv")
+data = pd.read_csv("linear-regression/pokemonregr.csv")
 data = data.sample(frac=1) # shuffle data
 data = data.fillna(0)
 
