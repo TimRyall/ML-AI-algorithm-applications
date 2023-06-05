@@ -12,7 +12,7 @@ from sklearn.linear_model import Ridge
 #####################################################################
 lambda_param = 0.01
 
-data = pd.read_csv("4.1-linear-regression/pokemonregr.csv")
+data = pd.read_csv("linear-regression/pokemonregr.csv")
 data = data.sample(frac=1) # shuffle data
 data = data.fillna(0)
 
