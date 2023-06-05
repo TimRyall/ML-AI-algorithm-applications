@@ -28,16 +28,9 @@ def draw_true_func():
     plt.show()
 
 #####################################################################
-# In Prac W4 we applied linear regression to a pokemon dataset, where the
-# loss function was sum of squares (or mean squared) error. Revisit this task but add (a)
-# L2; (b) L1 regularisation to the loss function, with some suitable value for the
-# regularization hyperparameter (see Section 5.3 of the textbook). Compare the
-# coefficient values from your different trained models.
-#
-######################################################################
 
 def poke_regr():
-    data = pd.read_csv("4.1-linear-regression/pokemonregr.csv")
+    data = pd.read_csv("linear-regression/pokemonregr.csv")
     data = data.sample(frac=1) # shuffle data
     data = data.fillna(0)
 
