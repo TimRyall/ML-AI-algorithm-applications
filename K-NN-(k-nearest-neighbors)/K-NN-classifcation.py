@@ -10,9 +10,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 ###############################################################################
-# Build a k-NN classifier with k = 3 for dataset classif.csv and find the training
-# and test loss (i.e. misclassification rate).
-###############################################################################
 
 # Import classifcation data
 classifDf = pd.read_csv("classif.csv", names=["x1","x2","y"])
@@ -46,10 +43,6 @@ misclassRate  = 1 - accuracy_score(yTestClassif, yPredClassif)
 print(f"Misclassification rate  of k-NN (k = {k}): {misclassRate}")
 
 ###############################################################################
-# Q3 b)
-# Plot the decision regions for your classifier together with the training and/or test
-# data points.
-###############################################################################
 
 # Define mesh grid inorder to draw decision regions
 # size of mesh grid is large enough to fit all data points
@@ -74,9 +67,7 @@ plt.title(f'KNN Decision Regions for k={k}')
 plt.show()
 # This will produce a scatter plot with the decision regions for the KNN classifier.
 
-###############################################################################
-# Experiment with different k values and see how it affects the loss values and the
-# decision regions.
+
 ###############################################################################
 
 # create array to store misclassifcation rates
