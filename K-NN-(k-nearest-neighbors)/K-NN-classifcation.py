@@ -67,7 +67,6 @@ plt.title(f'KNN Decision Regions for k={k}')
 plt.show()
 # This will produce a scatter plot with the decision regions for the KNN classifier.
 
-
 ###############################################################################
 
 # create array to store misclassifcation rates
