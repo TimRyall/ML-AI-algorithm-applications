@@ -68,7 +68,6 @@ plt.show()
 # This will produce a scatter plot with the decision regions for the KNN classifier.
 
 ###############################################################################
-# Q3 c)
 # Experiment with different k values and see how it affects the loss values and the
 # decision regions.
 ###############################################################################
