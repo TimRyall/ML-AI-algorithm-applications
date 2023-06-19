@@ -41,7 +41,6 @@ misclassRate  = 1 - accuracy_score(yTestClassif, yPredClassif)
 print(f"Misclassification rate  of DT (depth = {depth}): {misclassRate}")
 
 ###############################################################################
-# Q3 b)
 # Plot the decision regions for your classifier together with the training and/or test
 # data points.
 ###############################################################################
